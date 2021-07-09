@@ -1,182 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Luckiest+Guy&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/bob.svg" alt="blue origami bird logo">
+      <h1>Web Dev 1</h1>
+    </header>
 
-    h2 {
-      margin-top: 200px;
-    }
-    .mi {
-      align-self: flex-start;
-    }
+    <main>
+      <section id="hero">
+        <!--hero section-->
+        <img src="img/my-avatar.png" alt="avatar picture that doesn't look like me">
+        
+        <div>
+          <p>Emma Grey</p>
+          <p>Bernardsville, NJ</p>
+        </div>
+      </section>
 
-    .fa, .se, .sol, .si, .la, .li, .ti, .fi, .le, #mi, #do {
-      align-self: end;
-    }
+      <section id="bio">
+        <!--bio section-->
+        <h2>> Bio</h2>
+        
+        <p class="subject">I want to be...</p>
+          
+        <div class="answer">
+          <p>Taking the A Train ... (wink wink nudge nudge)</p>
+          <p>except that I still feel uncomfortable in confined spaces because of the pandemic!</p>
+        </div>
 
-    .do {
-      align-self: center;
-    }
+        <p class="subject">I REALLY want to be...</p>
 
-    .ra {
-      align-self: flex-start;
-    }
+        <div  class="answer">
+          <p>happy and doing what I love</p>
+        </div>
 
+        <p class="subject">In my free time...</p>
 
-    .a-section, .b-section {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      height: 100px;
-      margin: 100px;
-    }
-  </style>
-  <title>About Me</title>
-</head>
-<body>
-  <header>
-    <img src="img/bob.svg" alt="blue origami bird logo">
-    <h1>Web Dev 1</h1>
-  </header>
+        <div class="answer">
+          <p>I like to play video games, listen to music, meditate, dye my hair fun colors, and bask in the sunlight</p>
+        </div>
 
-  <main>
-    <section>
-      <!--hero section-->
-      <img src="img/my-avatar.png" alt="avatar picture that doesn't look like me">
-      
-      <div>
-        <p>Emma Grey</p>
-        <p>Bernardsville, NJ</p>
-      </div>
-    </section>
+        <p class="subject">My dream is...</p>
 
-    <section>
-      <!--bio section-->
-      <div>
-        <p>I want to be...</p>
+        <div class="answer">
+          <p>to work remotely and live in a warm, sunny place near a beach</p>
+        </div>
+        
+      </section>
+    
 
-        <p>Taking the A Train ... (wink wink nudge nudge)</p>
-        <p>except that I still feel uncomfortable in confined spaces because of the pandemic!</p>
+      <section id='tune'>
+        <!--guess the tune section-->
+        <h2> Guess the Tune <</h2>
 
-        <p>I REALLY want to be...</p>
-        <p>happy and doing what I love</p>
+        <div id="directions">
+          <p>AABA (+ coda), 4/4 time</p>
+          <p> - = quarter note</p>
+          <p> / = eighth note</p>
+          <p>when / or - is attached to solfege, that is how long the note is held. Rests are notated on the middle line, not attached to any solfege.</p>
+        </div>
 
-        <p>In my free time...</p>
-        <p>I like to play video games, listen to music, meditate, dye my hair fun colors, and bask in the sunlight</p>
-
-        <p>My dream is...</p>
-        <p>to work remotely and live in a warm, sunny place near a beach</p>
-      </div>
+        <div id="music">
+          <div class='a-section'>
+            <span class="sol">sol- - - - /</span>
+            <span class="mi">mi/ -</span>
+            <span class="sol">sol-</span>
+            <span class="do">do-</span>
+            <span class="mi">mi/</span>
+            <span class="si">si/ - - - </span>
+            <span class="do">- - - -</span>
+            <span class="la">la- - - -</span>
+            <span class="la">la/</span>
+            <span class="li">li/</span>
+            <span class="ti">ti/</span>
+            <span class="mi">mi/</span>
+            <span class="sol">sol/</span>
+            <span class="se">se/</span>
+            <span class="fa">fa/</span>
+            <span class="ra">ra/</span>
+            <span class="do">do/</span>
+            <span id="mi">mi/ - - -</span>
+            <span class="do">- - - -</span>
+          </div>
+          
+          <div class='a-section'>
+            <span class="sol">sol- - - - /</span>
+            <span class="mi">mi/ -</span>
+            <span class="sol">sol-</span>
+            <span class="do">do-</span>
+            <span class="mi">mi/</span>
+            <span class="si">si/ - - - </span>
+            <span class="do">- - - -</span>
+            <span class="la">la- - - -</span>
+            <span class="la">la/</span>
+            <span class="li">li/</span>
+            <span class="ti">ti/</span>
+            <span class="mi">mi/</span>
+            <span class="sol">sol/</span>
+            <span class="se">se/</span>
+            <span class="fa">fa/</span>
+            <span class="ra">ra/</span>
+            <span class="do">do/</span>
+            <span id="mi">mi/ - - -</span>
+            <span class="do">- - - -</span>
+          </div>
+          
+          <div class='b-section'>
+            <span class="la">la/</span>
+            <span class="do">do/ - - -</span>
+            <span class="mi">mi/</span>
+            <span class="fa">fa/ -</span>
+            <span class="la">la-</span>
+            <span class="do">do-</span>
+            <span class="mi">mi/</span>
+            <span class="la">la/ - - -</span>
+            <span class="do"> - - - -</span>
+            <span class="la">la/</span>
+            <span class="do">do/ - - -</span>
+            <span class="mi">mi/</span>
+            <span class="fi">fi/ -</span>
+            <span class="la">la-</span>
+            <span class="do">do-</span>
+            <span class="mi">mi/</span>
+            <span class="la">la/ - - -</span>
+            <span class="do">- - </span>
+            <span class="le">le- -</span>
+          </div>
+          
+          <div class='a-section'>
+            <span class="sol">sol- - - - /</span>
+            <span class="mi">mi/ -</span>
+            <span class="sol">sol-</span>
+            <span class="do">do-</span>
+            <span class="mi">mi/</span>
+            <span class="si">si/ - - - </span>
+            <span class="do">- - - -</span>
+            <span class="la">la- - - -</span>
+            <span class="la">la/</span>
+            <span class="li">li/</span>
+            <span class="ti">ti/</span>
+            <span class="mi">mi/</span>
+            <span class="sol">sol/</span>
+            <span class="se">se/</span>
+            <span class="fa">fa/</span>
+            <span class="ra">ra/</span>
+            <span class="do">do/</span>
+            <span id="mi">mi/ -</span>
+            <span class="fa">fa-</span>
+            <span class="fi">fi-</span>
+            <span class="sol">sol/</span>
+            <span class="la">la/</span>
+            <span class="ti">ti/</span>
+            <span class="do">do/ -</span>
+            <span id="do">doooooo.</span>
+          </div>
+        </div>
+        
     </section>
   </main>
 
-  <section>
-    <!--guess the tune section-->
-    <h2>Guess the Tune</h2>
-    <p>AABA (+ coda), 4/4 time</p>
-    <p> - = quarter note</p>
-    <p> / = eighth note</p>
-    <p>when / or - is attached to solfege, that is how long the note is held. Rests are notated on the middle line, not attached to any solfege.</p>
+  <footer>
+    &copy; 2021 - Emma Grey
+  </footer>
     
-    <div class='a-section'>
-      <span class="sol">sol- - - - /</span>
-      <span class="mi">mi/ -</span>
-      <span class="sol">sol-</span>
-      <span class="do">do-</span>
-      <span class="mi">mi/</span>
-      <span class="si">si/ - - - </span>
-      <span class="do">- - - -</span>
-      <span class="la">la- - - -</span>
-      <span class="la">la/</span>
-      <span class="li">li/</span>
-      <span class="ti">ti/</span>
-      <span class="mi">mi/</span>
-      <span class="sol">sol/</span>
-      <span class="se">se/</span>
-      <span class="fa">fa/</span>
-      <span class="ra">ra/</span>
-      <span class="do">do/</span>
-      <span id="mi">mi/ - - -</span>
-      <span class="do">- - - -</span>
-    </div>
     
-    <div class='a-section'>
-      <span class="sol">sol- - - - /</span>
-      <span class="mi">mi/ -</span>
-      <span class="sol">sol-</span>
-      <span class="do">do-</span>
-      <span class="mi">mi/</span>
-      <span class="si">si/ - - - </span>
-      <span class="do">- - - -</span>
-      <span class="la">la- - - -</span>
-      <span class="la">la/</span>
-      <span class="li">li/</span>
-      <span class="ti">ti/</span>
-      <span class="mi">mi/</span>
-      <span class="sol">sol/</span>
-      <span class="se">se/</span>
-      <span class="fa">fa/</span>
-      <span class="ra">ra/</span>
-      <span class="do">do/</span>
-      <span id="mi">mi/ - - -</span>
-      <span class="do">- - - -</span>
-    </div>
-    
-    <div class='b-section'>
-      <span class="la">la/</span>
-      <span class="do">do/ - - -</span>
-      <span class="mi">mi/</span>
-      <span class="fa">fa/ -</span>
-      <span class="la">la-</span>
-      <span class="do">do-</span>
-      <span class="mi">mi/</span>
-      <span class="la">la/ - - -</span>
-      <span class="do"> - - - -</span>
-      <span class="la">la/</span>
-      <span class="do">do/ - - -</span>
-      <span class="mi">mi/</span>
-      <span class="fi">fi/ -</span>
-      <span class="la">la-</span>
-      <span class="do">do-</span>
-      <span class="mi">mi/</span>
-      <span class="la">la/ - - -</span>
-      <span class="do">- - </span>
-      <span class="le">le- -</span>
-    </div>
-    
-    <div class='a-section'>
-      <span class="sol">sol- - - - /</span>
-      <span class="mi">mi/ -</span>
-      <span class="sol">sol-</span>
-      <span class="do">do-</span>
-      <span class="mi">mi/</span>
-      <span class="si">si/ - - - </span>
-      <span class="do">- - - -</span>
-      <span class="la">la- - - -</span>
-      <span class="la">la/</span>
-      <span class="li">li/</span>
-      <span class="ti">ti/</span>
-      <span class="mi">mi/</span>
-      <span class="sol">sol/</span>
-      <span class="se">se/</span>
-      <span class="fa">fa/</span>
-      <span class="ra">ra/</span>
-      <span class="do">do/</span>
-      <span id="mi">mi/ -</span>
-      <span class="fa">fa-</span>
-      <span class="fi">fi-</span>
-      <span class="sol">sol/</span>
-      <span class="la">la/</span>
-      <span class="ti">ti/</span>
-      <span class="do">do/ -</span>
-      <span id="do">doooooo.</span>
-    </div>
-</section>
-  
-  
-  
-</body>
+  </body>
 </html>
