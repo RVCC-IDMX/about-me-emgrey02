@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  margin: 100px 0;
+  margin: 100px 30px;
 }
 
 header, #hero, footer {
@@ -53,7 +53,7 @@ header {
 #bio .answer, #directions {
   background-color: #7C9E31;
   width: 45%;
-  padding: 10px;
+  padding: 20px;
   width: fit-content;
   margin-left: 200px;
   color: white;
