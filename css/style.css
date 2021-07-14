@@ -91,8 +91,21 @@ ul {
   align-items: center;
 }
 
-li:nth-child(3n) {
-  color: white;
+li:nth-child(2n) {
+  font-weight: 900;
+  color: rgb(167, 255, 255);
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 4px;
+}
+
+li:nth-child(2n + 1) {
+  color: rgb(255, 183, 149); 
+  font-variant: small-caps;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 50px 18px #d1f08e;
 }
 
 li {
@@ -101,6 +114,7 @@ li {
   list-style: none;
   font-size: 25px;
   margin-bottom: 80px;
+  width: 390px;
 }
 
 li::before {
