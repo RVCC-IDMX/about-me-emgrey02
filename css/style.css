@@ -46,9 +46,7 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: 
     inset 7px 7px 10px rgba(0, 0, 0, 0.3),
-    inset -5px -5px 10px rgba(0, 0, 0, 0.3),
-    3px 3px 20px rgba(255, 255, 255, 0.3),
-    -7px -7px 20px rgba(0, 0, 0, 0.3)
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #hero img{
@@ -71,7 +69,7 @@ header {
 
 #bio .answer, #directions {
   background-color: #7C9E31;
-  width: 45%;
+  max-width: 600px;
   padding: 20px;
   width: fit-content;
   border-radius: 1rem;
@@ -83,6 +81,7 @@ header {
 #hobbies {
   margin-top: 300px;
   text-align: center;
+  margin-bottom: 300px;
 }
 
 ul {
@@ -105,7 +104,7 @@ li:nth-child(2n + 1) {
   font-variant: small-caps;
   font-size: 30px;
   font-weight: 800;
-  text-shadow: 50px 18px #d1f08e;
+  text-shadow: 50px 20px #d1f08e;
 }
 
 li {
@@ -114,7 +113,7 @@ li {
   list-style: none;
   font-size: 25px;
   margin-bottom: 80px;
-  width: 390px;
+  width: 430px;
 }
 
 li::before {
@@ -141,30 +140,65 @@ li::after {
 /* PHOTO GALLERY */
 
 #gallery {
-  margin-top: 300px;
+  margin-top: 500px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border-radius: 3rem;
+  box-shadow: 
+    inset 7px 7px 10px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  background-color: #CD78EB;
 }
+
+#gallery h2 {
+  margin: 50px;
+  color: black;
+}
+
+figure img {
+  border: 15px groove black;
+  max-width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.473);
+}
+
+figcaption {
+  padding: 15px;
+  background-color: #7C9E31;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 3rem;
+}
+
+hr {
+  font-weight:900;
+  color: #c7eb78;
+}
+
 
 /* MUSIC SECTION */
 
 #tune {
-  margin: 200px 0;
-  text-align: right;
-  color: black;
+  margin: 300px 0;
+
 }
 
 #directions {
-  margin-left: auto;
-  margin-right: 200px;
+  margin: auto;
   text-align: center;
 }
 
 #music {
+  background-color: #CD78EB;
   width: 85%;
   height: auto;
   margin: 50px auto;
-  background-color:#d1f08e;
-  padding: 20px;
-  border: 20px groove black;
+  padding: 10px;
+  box-shadow: 
+    inset 7px 7px 10px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3rem;
 }
 
 
@@ -196,4 +230,5 @@ li::after {
 
 footer {
   padding: 30px;
+  color: white;
 }
