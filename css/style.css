@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 70px;
   margin: 30px;
   color: white;
+  text-align: center;
 }
 
 h2 {
@@ -58,11 +59,14 @@ header {
 
 #bio {
   margin-top: 300px;
+  text-align: center;
 }
 
 #bio .subject {
-  font-size: 30px;
-  margin-left: 100px;
+  margin-top: 100px;
+  font-size: 33px;
+  font-variant: small-caps;
+  color: black;
 }
 
 #bio .answer, #directions {
@@ -70,8 +74,8 @@ header {
   width: 45%;
   padding: 20px;
   width: fit-content;
-  margin-left: 200px;
   border-radius: 1rem;
+  margin: auto;
 }
 
 /* HOBBIES SECTION */
