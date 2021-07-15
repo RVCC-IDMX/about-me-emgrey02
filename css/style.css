@@ -206,6 +206,26 @@ hr {
   border: 5px double #85419E;
   font-family: 'Luckiest Guy', cursive;
 }
+
+/* FORM SECTION */
+
+#form-container {
+  margin: 10px auto;
+  text-align: center;
+}
+
+#form-container label {
+  padding: 10px;
+}
+
+#form-container input, 
+#form-container select, 
+#form-container textarea{
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
 /* MUSIC SECTION */
 
 #tune {
