@@ -126,10 +126,10 @@
 
           <form name='contact' data-netlify='true'>
             <label for='name'>Your Name: </label>
-            <input id='name' type='text' autocomplete='name' required><br>
+            <input id='name' type='text' name='name' autocomplete='name' required><br>
   
             <label for='reason'>Reason for contact:</label>
-            <select id='reason' name='select'>
+            <select id='reason' name='reason for contact'>
               <option value='default' selected>Select One</option>
               <option value='music'>Music</option>
               <option value='web development'>Web Development</option>
@@ -139,7 +139,7 @@
             </select><br>
   
             <label for='message'>Write a message:</label><br>
-            <textarea id='message'></textarea><br>
+            <textarea id='message' name='message'></textarea><br>
   
             <input type='submit' name='submit' value='Submit'>
           </form>
