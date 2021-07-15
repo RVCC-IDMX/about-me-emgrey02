@@ -176,12 +176,40 @@ hr {
   color: #c7eb78;
 }
 
+/* LIT SECTION */
 
+#lit {
+  margin: 300px auto;
+  max-width: 800px;
+  background-color: #c7eb78;
+  padding: 2rem 5rem;
+  border-radius: 4rem;
+  box-shadow: 
+    inset 7px 7px 10px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#lit h2 {
+  color: black;
+}
+
+#lit p:first-child:first-letter {
+  float: left;
+  font-size: 120px;
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: #CD78EB;
+  box-shadow: 
+    inset 7px 7px 10px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50% 40% 60% 50%;
+  border: 5px double #85419E;
+  font-family: 'Luckiest Guy', cursive;
+}
 /* MUSIC SECTION */
 
 #tune {
   margin: 300px 0;
-
 }
 
 #directions {
