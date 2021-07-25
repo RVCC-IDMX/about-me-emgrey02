@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #85419E;
@@ -5,7 +9,8 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,7 +42,7 @@ header {
 
 #hero {
   background-color: #CD78EB;
-  width: 60%;
+  width: 70%;
   padding: 20px;
   margin: 10px auto;
   font-weight: bolder;
@@ -51,6 +56,7 @@ header {
 
 #hero img{
   width: 500px;
+  max-width: 100%;
 }
 
 /* BIO SECTION */
@@ -58,6 +64,11 @@ header {
 #bio {
   margin-top: 300px;
   text-align: center;
+}
+
+#bio h2 {
+  margin: 100px 0;
+  font-size: 65px;
 }
 
 #bio .subject {
@@ -79,15 +90,26 @@ header {
 /* HOBBIES SECTION */
 
 #hobbies {
-  margin-top: 300px;
-  text-align: center;
+  margin: 300px auto 0 auto;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 300px;
+  max-width: 430px;
+}
+
+#hobbies h2 {
+  margin-bottom: 20px;
+}
+
+#hobbies div {
+  margin: auto;
+  color: white;
+  text-align: right;
 }
 
 ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 li:nth-child(2n) {
@@ -104,44 +126,44 @@ li:nth-child(2n + 1) {
   font-variant: small-caps;
   font-size: 30px;
   font-weight: 800;
-  text-shadow: 50px 20px #d1f08e;
+  text-shadow: 10px 20px #d1f08e;
+}
+
+li:last-child {
+  height: 150px;
+  margin-bottom: 0;
+}
+
+audio {
+  display: block;
+  margin: 50px auto;
 }
 
 li {
-  text-align: left;
   position: relative;
-  list-style: none;
   font-size: 25px;
+  list-style: none;
   margin-bottom: 80px;
-  width: 430px;
 }
 
 li::before {
   content: '';
   display: inline-block;
-  width: 40px;
-  height: 20px;
-  background-color: #7C9E31;
-  margin-right: 70px;
-}
-
-li::after {
-  content: '';
-  position: absolute;
-  left: 40px;
-  bottom: -4px;
+  position: relative;
+  top: .25em;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-left: 40px solid #7C9E31;
   border-bottom: 20px solid transparent;
+  margin-right: .5em;
 }
 
 /* PHOTO GALLERY */
 
 #gallery {
   margin-top: 500px;
-  width: 50%;
+  width: auto;
   margin: auto;
   text-align: center;
   border-radius: 3rem;
@@ -153,7 +175,7 @@ li::after {
 }
 
 #gallery h2 {
-  margin: 50px;
+  margin: 50px auto;
   color: black;
 }
 
@@ -166,7 +188,6 @@ figure img {
 figcaption {
   padding: 15px;
   background-color: #7C9E31;
-  max-width: 500px;
   margin: 20px auto;
   border-radius: 3rem;
 }
@@ -182,7 +203,7 @@ hr {
   margin: 300px auto;
   max-width: 800px;
   background-color: #c7eb78;
-  padding: 2rem 5rem;
+  padding: 2rem 2rem;
   border-radius: 4rem;
   box-shadow: 
     inset 7px 7px 10px rgba(0, 0, 0, 0.3),
@@ -191,6 +212,9 @@ hr {
 
 #lit h2 {
   color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 #lit p:first-child:first-letter {
@@ -208,6 +232,10 @@ hr {
 }
 
 /* FORM SECTION */
+
+#form-container h2 {
+  margin-bottom: 20px;
+}
 
 #form-container {
   margin: 10px auto;
@@ -235,7 +263,7 @@ hr {
 }
 
 #message {
-  width: 500px;
+  max-width: 500px;
   height: 100px;
 }
 
@@ -252,7 +280,8 @@ hr {
 
 #music {
   background-color: #CD78EB;
-  width: 85%;
+  font-size: 16px;
+  width: 100%;
   height: auto;
   margin: 50px auto;
   padding: 10px;
@@ -281,15 +310,112 @@ hr {
 
 .a-section, .b-section {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  height: 100px;
-  margin: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 20px;
+  min-height: 300px;
+  width: 100%;
+  margin: 100px auto;
+  gap: 2px;
+  padding: 5px;
+  border-radius: 2rem;
 }
 
+.a-section {
+  background-color: white;
+}
+
+.b-section {
+  background-color:#d1f08e; 
+}
+
+.a-section span, .b-section span {
+  border-bottom: 40px solid transparent;
+}
 /* FOOTER SECTION */
 
 footer {
   padding: 30px;
   color: white;
+}
+
+/*MEDIA QUERIES */
+
+@media screen and (min-width: 60em) {
+  figure {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 0;
+  }
+
+  figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    margin: auto;
+    margin-left: 3rem;
+  }
+
+  #lit {
+    max-width: 100%;
+    columns: 25rem;
+  }
+
+  .a-section, .b-section {
+    min-height: 200px;
+    font-size: 23px;
+    background-color: initial;
+  }
+
+  #hobbies {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  #gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #gallery h2 {
+    grid-column: 1/-1;
+  }
+
+  hr {
+    display: none;
+  }
+
+  figure {
+    display: block;
+  }
+
+  figcaption {
+    margin-top: 2rem;
+  }
+
+  #bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #bio h2 {
+    grid-column: 1/3;
+  }
+
+  #hobbies {
+    max-width: 70%;
+    display: block;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  audio {
+    margin: 50px 0 0 200px;
+  }
 }
