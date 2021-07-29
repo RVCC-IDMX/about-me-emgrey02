@@ -332,6 +332,29 @@ hr {
 .a-section span, .b-section span {
   border-bottom: 40px solid transparent;
 }
+
+/* VIDEO SECTION */
+#video-container {
+  position: relative;
+  padding-bottom: 80%;
+  padding-top: 25px;
+  height: 0px;
+}
+
+#myVideo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+}
+
 /* FOOTER SECTION */
 
 footer {
@@ -393,7 +416,8 @@ footer {
   }
 
   figcaption {
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto;
+    max-width: 500px;
   }
 
   #bio {
@@ -417,5 +441,11 @@ footer {
 
   audio {
     margin: 50px 0 0 200px;
+  }
+
+  #video-container {
+    width: 50%;
+    padding-bottom: 40%;
+    margin: auto;
   }
 }
