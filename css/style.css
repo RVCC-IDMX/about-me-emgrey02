@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,10 +33,91 @@ header, #hero, footer {
 
 header {
   position: relative;
-  padding-top: 10px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   background-color: #85419ec7;
   width: 100%;
+  height: auto;
+  text-align: center;
 }
+
+#logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+#logo img {
+  width: 150px;
+  margin: auto;
+}
+
+nav {
+  position: sticky;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  background-color: #7C9E31;
+  text-align: center;
+  flex-basis: 160px;
+  flex-shrink: 0;
+  flex-grow: 1;
+  max-width: auto;
+  padding: 10px 0;
+  margin: 20px 5px;
+  border-radius: 1rem;
+  box-shadow: 
+    inset 5px 5px 7px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+nav a:hover, nav a:active {
+  text-shadow: 0 0 7px white;
+  text-decoration: overline;
+  text-decoration-color: white;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  width: 100px;
+  text-align: center;
+  background-color: #7c9e31a8;
+  padding: 10px;
+  border-radius: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+  z-index: 10;
+}
+
+#back-to-top:hover, #back-to-top:active {
+  text-shadow: 0 0 7px white;
+  text-decoration-color: white;
+}
+
 
 /* HERO SECTION */
 
@@ -44,7 +125,7 @@ header {
   background-color: #CD78EB;
   width: 70%;
   padding: 20px;
-  margin: 10px auto;
+  margin: 20px auto;
   font-weight: bolder;
   color: black;
   border-radius: 3rem;
@@ -107,12 +188,12 @@ header {
   text-align: right;
 }
 
-ul {
+#hobbies ul {
   display: flex;
   flex-direction: column;
 }
 
-li:nth-child(2n) {
+#hobbies li:nth-child(2n) {
   font-weight: 900;
   color: rgb(167, 255, 255);
   font-size: 30px;
@@ -121,7 +202,7 @@ li:nth-child(2n) {
   text-decoration-thickness: 4px;
 }
 
-li:nth-child(2n + 1) {
+#hobbies li:nth-child(2n + 1) {
   color: rgb(255, 183, 149); 
   font-variant: small-caps;
   font-size: 30px;
@@ -129,7 +210,7 @@ li:nth-child(2n + 1) {
   text-shadow: 10px 20px #d1f08e;
 }
 
-li:last-child {
+#hobbies li:last-child {
   height: 150px;
   margin-bottom: 0;
 }
@@ -139,14 +220,14 @@ audio {
   margin: 50px auto;
 }
 
-li {
+#hobbies li {
   position: relative;
   font-size: 25px;
   list-style: none;
   margin-bottom: 80px;
 }
 
-li::before {
+#hobbies li::before {
   content: '';
   display: inline-block;
   position: relative;
@@ -395,9 +476,14 @@ footer {
     margin-right: auto;
     margin-left: auto;
   }
+
 }
 
 @media screen and (min-width: 100em) {
+  nav {
+    overflow-x: hidden;
+  }
+
   #gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -434,7 +520,7 @@ footer {
     display: block;
   }
 
-  ul {
+  #hobbies ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
