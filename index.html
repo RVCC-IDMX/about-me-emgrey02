@@ -24,18 +24,19 @@
         <li><a href="#hobbies">hobbies</a></li>
         <li><a href="#gallery">photo gallery</a></li>
         <li><a href='#lit'>book excerpt</a></li>
-        <li><a href='#form'>contact me</a></li>
-        <li><a href='#tune'>guess the tune</a></li>
         <li><a href='#video'>video</a></li>
+        <li><a href='#form'>contact me</a></li>
       </ul>
     </nav>
 
-    <a href='#' id='back-to-top'>Back To Top</a>
+    <a href='#' id='back-to-top'>
+      <img src="https://img.icons8.com/ios/50/000000/send-letter--v1.png"/>
+    </a>
 
     <main>
       <section id="hero">
         <!--hero section-->
-        <img src="img/my-avatar.png" alt="avatar picture that doesn't look like me">
+        <img src="img/my-avatar.png" alt="avatar that doesn't look like me">
         
         <div>
           <p>Emma Grey</p>
@@ -83,6 +84,7 @@
       </section>
 
       <section id='hobbies'>
+        <!-- hobbies section -->
         <h2>My Hobbies</h2>
         <ul>
           <li> &#9834 listening to music &#9835</li>
@@ -99,10 +101,10 @@
       </section>
 
       <section>
-        
+        <!-- photo gallery section -->
         <div id='gallery'>
           <h2>Photo Gallery</h2>
-  
+          
           <hr>
   
           <figure>
@@ -130,6 +132,7 @@
 
       <article>
         
+        <!-- lit section -->
         <div id='lit'>
           <h2>Excerpt from Sherlock Holmes</h2>
           
@@ -158,48 +161,19 @@
         </div>
       </article>
 
-      <section id='form'>
-        <div id='form-container'>
-          <h2>Contact Me!</h2>
-
-          <form name='contact' data-netlify='true'>
-            
-            <label for='name'>Your Name:</label>
-            <input id='name' type='text' name='name' autocomplete='name' required><br>
-
-            <label for='email'>Your Email:</label>
-            <input id='email' type='text' name='email' autocomplete='email' required><br>
-  
-            <label for='reason'>Reason for contact:</label>
-            <select id='reason' name='reason for contact'>
-              <option value='default' selected>--Select One--</option>
-              <option value='music'>Music</option>
-              <option value='web development'>Web Development</option>
-              <option value='scleroderma'>Scleroderma</option>
-              <option value='friendship'>Friendship</option>
-              <option value='video games'>Video Games</option>
-            </select><br>
-  
-            <label for='message'>Write a message:</label><br>
-            <textarea id='message' name='message'></textarea><br>
-  
-            <input type='submit' name='submit' value='Submit'>
-          </form>
-        </div>
-      </section>
-    
-
-      <section id='tune'>
-        <!--guess the tune section-->
+      
+      
+      <!-- <section id='tune'>
+        guess the tune section
         <h2> Guess the Tune </h2>
-
+        
         <div id="directions">
           <p>AABA (+ coda), 4/4 time</p>
           <p> - = quarter note</p>
           <p> / = eighth note</p>
           <p>when / or - is attached to solfege, that is how long the note is held. Rests are notated on the middle line, not attached to any solfege.</p>
         </div>
-
+        
         <div id="music">
           <div class='a-section'>
             <span class="sol">sol- - - - /</span>
@@ -295,11 +269,11 @@
             <span id="do">doooooo.</span>
           </div>
         </div>
-        
-    </section>
-
-    <section id='video'>
-      <h2>A Short Video:</h2>
+      </section> -->
+      
+      <section id='video'>
+        <!-- video section -->
+        <h2>A Short Video:</h2>
       <figure>
         <div id='video-container'>
           <iframe id='myVideo' src="https://www.youtube.com/embed/mZvBWswx9As" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -307,10 +281,85 @@
         <figcaption>Charlie the Cavapoo sleeping soundly on the couch</figcaption>
       </figure>
     </section>
+    
+    <section id='form'>
+      <!-- contact section -->
+        <h2>Contact Me:</h2>
+  
+        <form name='contact' data-netlify='true' method='POST'>
+
+          <fieldset>
+            <legend>Contact Form</legend>
+
+            <div id='form-elements'>
+              
+              <!-- Name -->
+              <label for='name'>Name:</label>
+              <input id='name' type='text' name='name' autocomplete='name' required>
+      
+              <!-- Email -->
+              <label for='email'>Email:</label>
+              <input id='email' type='email' name='email' autocomplete='email' required>
+  
+              <!-- Phone Number -->
+              <label for='phone'>Phone:</label>
+              <input id='phone' type='tel' name='phone' autocomplete='phone'>
+
+              <label for='phone-type'>Phone Type</label>
+              <select id='phone-type' name='phone-type'>
+                <option value='default' selected>--Select One--</option>
+                <option value='home'>Home</option>
+                <option value='mobile'>Mobile</option>
+                <option value='work'>Work</option>
+              </select>
+      
+              <label for='reason'>Reason for contact:</label>
+              <select id='reason' name='reason for contact'>
+                <option value='default' selected>--Select One--</option>
+                <option value='music'>Music</option>
+                <option value='web development'>Web Development</option>
+                <option value='scleroderma'>Scleroderma</option>
+                <option value='friendship'>Friendship</option>
+                <option value='video games'>Video Games</option>
+              </select>
+      
+              <label for='message'>Write a message:</label>
+              <textarea id='message' name='message' rows='6'></textarea>
+
+              <fieldset>
+                <legend>Would you like a reply?</legend>
+
+                <ul>
+                  <li>
+                    <input type='radio' id='yes' name='reply' value='yes'>
+                    <label for='yes'>Yes please!</label>
+                  </li>
+                  <li>
+                    <input type='radio' id='no' name='reply' value='no' checked>
+                    <label for='no'>No, thanks.</label>
+                  </li>
+                </ul>
+
+
+              </fieldset>
+      
+              <button type='submit' name='submit' value='Submit'>Submit</button>
+            </div>
+
+          </fieldset>
+          
+
+        </form>
+    </section>
   </main>
 
   <footer>
-    &copy; 2021 - Emma Grey
+    <span>
+      &copy; 2021 - Emma Grey
+    </span>
+    <span>
+      <a href="https://icons8.com/icon/124435/send-letter">Send Letter icon by Icons8</a>
+    </span>
   </footer>
     
     

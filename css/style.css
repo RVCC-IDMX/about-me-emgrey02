@@ -56,7 +56,7 @@ header {
 }
 
 nav {
-  position: sticky;
+  position: relative;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -77,8 +77,9 @@ nav li {
   flex-grow: 1;
   max-width: auto;
   padding: 10px 0;
-  margin: 20px 5px;
-  border-radius: 1rem;
+  margin: 20px 5px 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   box-shadow: 
     inset 5px 5px 7px rgba(0, 0, 0, 0.3),
     inset -2px -2px 5px rgba(0, 0, 0, 0.3);
@@ -98,23 +99,24 @@ nav a:hover, nav a:active {
 
 #back-to-top {
   position: fixed;
+  font-size: 16px;
   bottom: 0;
-  left: 0;
-  margin: 20px;
-  width: 100px;
+  right: 0;
+  margin: 5px;
+  width: 60px;
   text-align: center;
-  background-color: #7c9e31a8;
-  padding: 10px;
-  border-radius: 2rem;
+  padding: 5px;
+  border-radius: 1rem;
   font-weight: 800;
   text-decoration: none;
   color: black;
   z-index: 10;
 }
 
-#back-to-top:hover, #back-to-top:active {
-  text-shadow: 0 0 7px white;
-  text-decoration-color: white;
+#back-to-top img:hover, #back-to-top img:active {
+  background-color: white;
+  border-radius: 100%;
+  outline: 2px solid black;
 }
 
 
@@ -305,27 +307,36 @@ hr {
 
 /* FORM SECTION */
 
-#form-container h2 {
-  margin-bottom: 20px;
+#form {
+  max-width: 800px;
+  margin: auto;
+  color: white;
 }
 
-#form-container {
-  margin: 10px auto;
-  text-align: center;
+fieldset {
+  margin: 1rem 1rem;
+  border: 5px double black;
+  border-radius: 2rem;
 }
 
-#form-container label {
-  padding: 10px;
+#form-elements {
+  display: grid;
+  row-gap: 15px;
+  margin: 1em;
+}
+
+#form-elements label {
   font-variant: small-caps;
-  font-size: 24px;
+  font-size: 22px;
+  position: relative;
 }
 
-#form-container input, 
-#form-container select, 
-#form-container textarea{
-  margin-bottom: 20px;
+#form-elements input, 
+#form-elements select, 
+#form-elements textarea,
+#form-elements button {
+  padding: 15px 20px;
   font-size: 18px;
-  padding: 15px 30px;
   background-color: #7C9E31;
   border-radius: 2rem;
   border: none;
@@ -334,10 +345,63 @@ hr {
     inset -1px -1px 3px rgba(0, 0, 0, 0.3);
 }
 
-#message {
-  max-width: 500px;
-  height: 100px;
+#form-elements button {
+  margin: auto;
+  background-color: black;
+  color: white;
+  box-shadow: 
+    inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.3);
 }
+
+#form-elements button:hover, #form-elements button:active {
+  background-color: #7C9E31;
+  color: black;
+  box-shadow: 
+    inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#form-elements textarea {
+  resize: vertical;
+}
+
+#form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+#form li {
+  margin: 20px;
+}
+
+li input {
+  opacity: 0;
+}
+
+li label::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #7C9E31;
+}
+
+li input:checked + label::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -42.37px;
+  top: 25%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+}
+
 
 /* MUSIC SECTION */
 
@@ -458,11 +522,11 @@ footer {
     columns: 25rem;
   }
 
-  .a-section, .b-section {
+  /* .a-section, .b-section {
     min-height: 200px;
     font-size: 23px;
     background-color: initial;
-  }
+  } */
 
   #hobbies {
     margin-right: auto;
@@ -508,7 +572,7 @@ footer {
   }
 
   #hobbies {
-    max-width: 70%;
+    max-width: 90%;
     display: block;
   }
 
@@ -517,8 +581,12 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  #hobbies li {
+    text-align: center;
+  }
+
   audio {
-    margin: 50px 0 0 200px;
+    margin: 50px 0 0 400px;
   }
 
   #video-container {
