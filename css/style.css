@@ -182,7 +182,7 @@ a.open-nav .toggle::before, a.close-nav .toggle::before {
 #bio .answer, #directions {
   background-color: #CD78EB;
   max-width: 600px;
-  width: 95%;
+  width: 85%;
   padding: 20px;
   width: fit-content;
   border-radius: .5em;
