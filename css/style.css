@@ -168,7 +168,8 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 
 #hero {
   background-color: #CD78EB;
-  width: 70%;
+  width: 95%;
+  max-width: 800px;
   padding: 20px;
   margin: 20px auto;
   font-weight: bolder;
