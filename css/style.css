@@ -144,6 +144,9 @@ a.open-nav .toggle::before, a.close-nav .toggle::before {
   display: flex;
 }
 
+#header:target #logo img {
+  position: fixed;
+}
 
 /* HERO SECTION */
 
