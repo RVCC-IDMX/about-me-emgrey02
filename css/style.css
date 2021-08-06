@@ -209,9 +209,8 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 #bio .answer, #directions {
   background-color: #CD78EB;
   max-width: 600px;
-  width: 85%;
+  width: 95%;
   padding: 20px;
-  width: fit-content;
   border-radius: .5em;
   margin: auto;
 }
