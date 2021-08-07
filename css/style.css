@@ -334,6 +334,7 @@ hr {
   background-color: var(--light-purp);
   padding: 2rem 2rem;
   border-radius: .5em;
+  line-height: 1.5;
 }
 
 #lit-container p:first-child:first-letter {
