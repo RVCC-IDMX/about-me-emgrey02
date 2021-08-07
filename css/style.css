@@ -31,11 +31,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section, article {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 a:focus {
-  outline: 3px double black;
+  outline: 3px dashed black;
 }
 
 /* HEADER */
@@ -47,12 +47,19 @@ a:focus {
 header {
   padding: 10px;
   width: 100%;
-  height: 200px;
+  height: 80px;
+}
+
+#logo {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
 }
 
 #logo img {
   position: absolute;
-  width: 100px;
+  width: 80px;
   border-radius: 50%;
   z-index: 12;
 }
@@ -73,25 +80,25 @@ header {
   width: 100%;
   height: 100%;
   display: none;
-  flex-direction: column;
   justify-content: center;
   background-color:var(--green);
   z-index: 11;
 }
 
 #nav-links {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
-#mobile-nav li {
-  margin: 2em;
-}
-
 #nav-links li a {
   text-decoration: none;
   color: black;
+  padding: 5px;
 }
 
 #nav-links li a:hover {
@@ -177,19 +184,20 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 
 #hero {
   background-color: var(--light-purp);
-  width: 95%;
-  max-width: 800px;
+  max-width: 95%;
+  height: auto;
   padding: 20px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: bolder;
   color: black;
   border-radius: .5em;
 }
 
 #hero img{
-  margin-top: 20px;
-  width: 400px;
+  margin: 20px auto;
   max-width: 100%;
+  width: 90%;
   border-radius: .5em;
   border: 10px double black;
 }
@@ -222,7 +230,7 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
   width: 95%;
   padding: 20px;
   border-radius: .5em;
-  margin: 0 auto 5em;
+  margin: 0 auto 3em;
 }
 
 /* HOBBIES SECTION */
@@ -237,7 +245,7 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 }
 
 #hobbies h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 }
 
 #hobbies div {
@@ -252,30 +260,17 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 
 #hobbies li:nth-child(2n) {
   font-weight: 900;
-  color: rgb(167, 255, 255);
-  font-size: 30px;
+  color: rgb(215, 241, 241);
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 4px;
 }
 
 #hobbies li:nth-child(2n + 1) {
-  color: rgb(255, 183, 149); 
+  color: rgb(3, 3, 3); 
   font-variant: small-caps;
-  font-size: 30px;
   font-weight: 800;
-  text-shadow: 10px 20px #d1f08e;
-}
-
-#hobbies li:last-child {
-  height: 150px;
-  margin-bottom: 0;
-}
-
-audio {
-  display: block;
-  margin: 50px auto;
-  padding: 0;
+  text-shadow: 10px 3px 5px #4e2c2c;
 }
 
 #hobbies li {
@@ -285,6 +280,17 @@ audio {
   margin-bottom: 80px;
 }
 
+#hobbies li:last-child {
+  margin-bottom: 0;
+}
+
+audio {
+  display: block;
+  margin: 50px auto;
+  padding: 0;
+}
+
+
 #hobbies li::before {
   content: '';
   display: inline-block;
@@ -292,9 +298,9 @@ audio {
   top: .25em;
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-left: 40px solid var(--green);
-  border-bottom: 20px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 20px solid var(--green);
+  border-bottom: 10px solid transparent;
   margin-right: .5em;
 }
 
@@ -305,8 +311,12 @@ audio {
   margin: auto;
   text-align: center;
   border-radius: .5em;
-  padding: 20px;
+  padding: 5px;
   background-color: var(--light-purp);
+}
+
+figure {
+  margin: 10px;
 }
 
 figure img {
@@ -555,6 +565,11 @@ footer a {
 /*MEDIA QUERIES */
 
 @media screen and (min-width: 60em) {
+
+  section, article {
+    margin-top: 120px;
+  }
+
   #back-to-top {
     display: block;
     position: fixed;
@@ -562,12 +577,28 @@ footer a {
     right: 0;
     margin: 15px;
     z-index: 10;
-    border-radius: 5em;
+    border-radius: 100%;
+    padding: 5px 5px 0px;
   }
   
   #back-to-top img:hover, #back-to-top img:active {
     background-color: var(--green);
     border-radius: 50%;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    max-width: 1200px;
+  }
+
+  #hero img {
+    max-width: 600px;
+  }
+
+  #hero div {
+    margin: auto;
   }
 
   fieldset {
@@ -596,7 +627,10 @@ footer a {
   }
 
   #nav-links {
-    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 3em;
+    align-items: center;
     gap: 2em;
   }
 
@@ -605,6 +639,7 @@ footer a {
   }
 
   figure {
+    margin: 40px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 0;
@@ -681,7 +716,7 @@ footer a {
   }
 
   audio {
-    margin: 50px 0 0 400px;
+    margin-right: 0;
   }
 
   #video-container {
