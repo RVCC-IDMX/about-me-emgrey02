@@ -93,10 +93,11 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  transform: translateY(-100vh);
   justify-content: center;
   background-color:var(--green);
   z-index: 11;
+  transition: transform 300ms cubic-bezier(.06,.72,.57,1);;
 }
 
 #nav-links {
@@ -110,15 +111,20 @@ header {
 }
 
 #nav-links li a {
+  display: block;
   text-decoration: none;
   color: black;
   padding: 5px;
+  border-radius: .5em;
+  transition-duration: 500ms;
+  transition-property: background-color, color, transform;
+  transition-timing-function: ease-out;
 }
 
 #nav-links li a:hover {
   background-color: var(--special);
-  border-radius: .5em;
   color: white;
+  transform: scale(1.1);
 }
 
 a.open-nav, a.close-nav {
@@ -131,6 +137,7 @@ a.open-nav, a.close-nav {
   background-color: var(--green);
   border-radius: .3em;
   z-index: 11;
+  transition: background-color 300ms ease-in;
 }
 
 a.open-nav:hover, a.close-nav:hover {
@@ -149,6 +156,7 @@ a.close-nav {
   border-radius: 1rem;
   background-color: black;
   margin: 17.5px auto;
+  transition: background-color 300ms ease-in;
 }
 
 a.open-nav .toggle::before, a.close-nav .toggle::before {
@@ -160,13 +168,13 @@ a.open-nav .toggle::before, a.close-nav .toggle::before {
   height: 5px;
   border-radius: 1rem;
   background-color: black;
+  transition: background-color 300ms ease-in;
 }
 
-a.open-nav:hover .toggle, a.close-nav:hover .toggle {
-  background-color: white;
-}
-
-a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
+a.open-nav:hover .toggle, 
+a.close-nav:hover .toggle,
+a.open-nav:hover .toggle::before, 
+a.close-nav:hover .toggle::before {
   background-color: white;
 }
 
@@ -188,6 +196,7 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 
 #header:target #mobile-nav {
   display: flex;
+  transform: translateY(0);
 }
 
 #header:target #logo img {
@@ -266,7 +275,7 @@ a.open-nav:hover .toggle::before, a.close-nav:hover .toggle::before {
 
 #hobbies li:nth-child(2n) {
   font-weight: 900;
-  color: rgb(215, 241, 241);
+  color: #9C938A;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 4px;
@@ -415,6 +424,8 @@ legend {
   font-variant: small-caps;
   font-size: 1.5em;
   width: 60%;
+  transition-duration: 300ms;
+  transition-property: color, background-color;
 }
 
 #form-elements button:hover, #form-elements button:active {
@@ -604,10 +615,32 @@ footer a {
     border-radius: 100%;
     padding: 5px 5px 0px;
   }
+
+  #back-to-top img {
+    transition-duration: 300ms;
+    transition-property: background-color;
+    border-radius: 50%;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+
+    70% {
+      transform: translateY(-7px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
   
   #back-to-top img:hover, #back-to-top img:active {
     background-color: var(--green);
-    border-radius: 50%;
+    animation-name: bounce;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
   }
 
   #hero {
