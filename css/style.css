@@ -386,7 +386,7 @@ form {
   border-radius: .5em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541),
   -5px -5px 10px rgba(0, 0, 0, 0.514);
-  padding: 2px;
+  padding: 10px 2px;
 }
 
 fieldset {
