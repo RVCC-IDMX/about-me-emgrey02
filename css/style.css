@@ -390,20 +390,21 @@ form {
 }
 
 fieldset {
-  border-radius: .5em;
-  border: 5px double black;
+  border: none;
+  border-top: 4px solid var(--main);
 }
 
 legend {
   background-color: var(--lighter);
   color: black;
   border-radius: .5em;
-  padding: 10px;
+  padding: 4px;
 }
 
 #form-elements {
   display: grid;
   row-gap: 15px;
+  margin-top: .5em;
 }
 
 #form-elements label {
@@ -718,7 +719,9 @@ footer a {
   }
 
   fieldset {
+    border-radius: .5em;
     margin: 1em;
+    border: 5px double black;
   }
 
   #form-elements {
