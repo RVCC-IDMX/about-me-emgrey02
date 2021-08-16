@@ -27,7 +27,7 @@
           <li><a href="#bio">Biography</a></li>
           <li><a href="#hobbies">Hobbies</a></li>
           <li><a href="#gallery">Photo Gallery</a></li>
-          <li><a href='#lit'>Book Excerpt</a></li>
+          <li><a href='#lit'>Blog</a></li>
           <li><a href='#video'>Video</a></li>
           <li><a href='#form'>Contact Me</a></li>
         </ul>
@@ -38,7 +38,7 @@
           <li><a href="#bio">Biography</a></li>
           <li><a href="#hobbies">Hobbies</a></li>
           <li><a href="#gallery">Photo Gallery</a></li>
-          <li><a href='#lit'>Book Excerpt</a></li>
+          <li><a href='#lit'>Blog</a></li>
           <li><a href='#video'>Video</a></li>
           <li><a href='#form'>Contact Me</a></li>
         </ul>
@@ -62,7 +62,7 @@
         <img src="img/emma.jpg" alt="photograph of Emma's face">
         
         <div>
-          <h1>Emma Grey (she/her)</h1>
+          <h1>Emma Grey</h1><span>she/her</span>
           <h2>web developer, musician</h2>
         </div>
       </section>
@@ -155,28 +155,63 @@
       <article id='lit'>
         
         <!-- lit section -->
-        <h2>Excerpt from Sherlock Holmes</h2>
+        <h2>Accessible Links</h2>
         <div id='lit-container'>
           
           <div>
   
-            <p>There was the case, and of course there was but one way out of it. Might I not escort her to this place? And then, as a second thought, why should she come at all? I was Isa Whitney's medical adviser, and as such I had influence over him. I could manage it better if I were alone. I promised her on my word that I would send him home in a cab within two hours if he were indeed at the address which she had given me. And so in ten minutes I had left my armchair and cheery sitting-room behind me, and was speeding eastward in a hansom on a strange errand, as it seemed to me at the time, though the future only could show how strange it was to be.</p>
-  
-            <p>But there was no great difficulty in the first stage of my adventure. Upper Swandam Lane is a vile alley lurking behind the high wharves which line the north side of the river to the east of London Bridge. Between a slop-shop and a gin-shop, approached by a steep flight of steps leading down to a black gap like the mouth of a cave, I found the den of which I was in search. Ordering my cab to wait, I passed down the steps, worn hollow in the centre by the ceaseless tread of drunken feet; and by the light of a flickering oil-lamp above the door I found the latch and made my way into a long, low room, thick and heavy with the brown opium smoke, and terraced with wooden berths, like the forecastle of an emigrant ship.</p>
-  
-            <p>Through the gloom one could dimly catch a glimpse of bodies lying in strange fantastic poses, bowed shoulders, bent knees, heads thrown back, and chins pointing upward, with here and there a dark, lack-lustre eye turned upon the newcomer. Out of the black shadows there glimmered little red circles of light, now bright, now faint, as the burning poison waxed or waned in the bowls of the metal pipes. The most lay silent, but some muttered to themselves, and others talked together in a strange, low, monotonous voice, their conversation coming in gushes, and then suddenly tailing off into silence, each mumbling out his own thoughts and paying little heed to the words of his neighbour. At the farther end was a small brazier of burning charcoal, beside which on a three-legged wooden stool there sat a tall, thin old man, with his jaw resting upon his two fists, and his elbows upon his knees, staring into the fire.</p>
-  
-            <p>As I entered, a sallow Malay attendant had hurried up with a pipe for me and a supply of the drug, beckoning me to an empty berth.</p>
-  
-            <p>"Thank you. I have not come to stay," said I. "There is a friend of mine here, Mr. Isa Whitney, and I wish to speak with him."</p>
-  
-            <p>There was a movement and an exclamation from my right, and peering through the gloom, I saw Whitney, pale, haggard, and unkempt, staring out at me.</p>
-  
-            <p>"My God! It's Watson," said he. He was in a pitiable state of reaction, with every nerve in a twitter. "I say, Watson, what o'clock is it?"</p>
-  
-            <p>"Nearly eleven."</p>
-  
-            <p>"Of what day?"</p>
+            <p> Links are a part of almost every website on the internet. They take the user to different places, whether it is within the webpage or to another website. Making sure links can be accessed is essential since that is how we traverse through the web. </p>
+
+            <p> In this blog post I will explain the various pseudo-classes that apply to links. Styling these appropriately is the key to an accessible website. </p>
+
+            <p> First, we need to consider the various ways in which the user can access and navigate through web pages.</p>
+
+            <ul>
+              <h4>Some ways users can access the web:</h4>
+              <li>touch screen</li>
+              <li>mouse/trackpad</li>
+              <li>keyboard</li>
+              <li>single-switch input</li>
+              <li>mouth stick</li>
+              <li>head movement tracking</li>
+              <li>eye movement tracking</li>
+              <li>game controller</li>
+              <li>voice recognition</li>
+              <li>screen reader</li>
+            </ul>
+
+            <p> While there are more, these can be narrowed down to three main inputs: mouse, touch, and keyboard. For example, a mouth stick, head movement tracking, or eye movement tracking acts as a mouse, since the cursor moves as the person moves. The single-switch input would usually be used with an on-screen keyboard, since they can navigate it and use it with a switch. Other ways to use an on-screen keyboard is with a mouse, touchscreen, or joystick. In each instance, basic navigation of either touch, mouse, or keyboard remains true. </p>
+
+            <p> With this in mind, the web developer will take care to style the basic pseudo classes of links in order for everyone to be able to navigate with ease. </p>
+
+            <ul>
+              <h4>A link's pseudo-classes:</h4>
+              <li>:link</li>
+              <li>:visited</li>
+              <li>:hover</li>
+              <li>:focus</li>
+              <li>:active</li>
+            </ul>
+
+            <p> I have to say, only the first two pseudo-classes are specifically for links, while the others can apply to other HTML elements. They are important to include nonetheless. Let's go through each pseudo-class and learn what they control.</p>
+
+            <p><b>:link</b> controls the style of an unvisited link- basically what it looks like when it is not being interacted with and hasn't been interacted with yet.</p>
+
+            <p><b>:visited</b> controls the style of a link that has been visited! This lets the user know that they have already followed that particular link.</p>
+
+            <p><b>:hover</b> controls the style of a link as it is being hovered over. This only applies to someone using a mouse or something that translates to a mouse to navigate the web. </p>
+
+            <p><b>:focus</b> controls the style of a link as it is being focused on. When an element is in focus, it is being selected (not activated) by a keyboard. You can think of it as a hover state but for keyboard users. </p>
+
+            <p><b>:active</b> controls the style of a link as it is being activated. This means as it is being touched, clicked, or activated by a keyboard. This state passes by very quickly, but applies to all inputs. It lets the user know that they are about to follow the link.</p>
+
+            <p> Including and styling each of these pseudo-classes not only increase accessibility, but overall user experience. Giving feedback to the user lets them know that they are interacting with the page, and consistency with this feedback will make the user comfortable with your site. </p>
+
+            <p> Here is a simple link to interact with, demonstrating clear differences in pseudo-classes: </p>
+
+            <a href='#lit'>LINK</a>
+
+            <a href='https://www.abilitynet.org.uk/factsheets/keyboard-and-mouse-alternatives-and-adaptations'>source</a>
   
           </div>
 
