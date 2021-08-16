@@ -7,6 +7,7 @@
   --lighter: #f0f0f0;
   --blue: #7B949C;
   --special: #610012;
+  --active:#9C938A;
 }
 
 body {
@@ -48,7 +49,7 @@ section, article {
   margin-top: 50px;
 }
 
-a:focus {
+a:focus-visible {
   outline: 3px dashed black;
 }
 
@@ -71,9 +72,22 @@ header {
 }
 
 #logo img {
+  border-radius: .5em;
   position: absolute;
+  padding: 2px;
   width: 60px;
   z-index: 12;
+}
+
+#logo img:hover {
+  background-color: var(--main);
+  transition: background-color 300ms ease-in;
+}
+
+#logo img:active {
+  background-color: var(--active);
+  padding: 3px;
+  transition: background-color 30ms ease;
 }
 
 #main-nav, #mobile-nav {
@@ -125,6 +139,11 @@ header {
   transform: scale(1.1);
 }
 
+#nav-links li a:active {
+  background-color: var(--active);
+  transition: background-color 30ms ease;
+}
+
 a.open-nav, a.close-nav {
   display: block;
   position: fixed;
@@ -140,6 +159,11 @@ a.open-nav, a.close-nav {
 
 a.open-nav:hover, a.close-nav:hover {
   background-color: var(--special);
+}
+
+a.open-nav:active, a.close-nav:active {
+  background-color: var(--active);
+  transition: background-color 30ms ease;
 }
 
 a.close-nav {
@@ -445,10 +469,15 @@ legend {
   transition-property: color, background-color;
 }
 
-#form-elements button:hover, #form-elements button:active {
+#form-elements button:hover {
   color: white;
   background-color: var(--special);
   cursor: pointer;
+}
+
+#form-elements button:active {
+  background-color: var(--active);
+  transition: background-color 30ms ease;
 }
 
 #form-elements textarea {
@@ -695,11 +724,16 @@ footer a {
     }
   }
   
-  #back-to-top img:hover, #back-to-top img:active {
+  #back-to-top img:hover {
     background-color: var(--blue);
     animation-name: bounce;
     animation-duration: 800ms;
     animation-iteration-count: infinite;
+  }
+
+  #back-to-top img:active {
+    background-color: var(--active);
+    transition: background-color 30ms ease;
   }
 
   #hero {
