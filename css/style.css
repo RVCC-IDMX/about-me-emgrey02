@@ -250,6 +250,12 @@ a.close-nav:hover .toggle::before {
 
 #hero h1 {
   font-weight:900;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#hero span {
+  display: inline-block;
 }
 
 #hero h2 {
@@ -394,6 +400,29 @@ hr {
   border-radius: 50% 40% 60% 50%;
   border: 5px double var(--main);
   font-family: 'Open Sans', sans-serif;
+}
+
+#lit-container a:link {
+  color: green;
+  padding: 7px;
+  border-radius: .5em;
+}
+
+#lit-container a:visited {
+  color: gray;
+}
+
+#lit-container a:hover {
+  background: black;
+}
+
+#lit-container a:focus {
+  outline: 2px solid red;
+}
+
+#lit-container a:active {
+  background-color: green;
+  color: black;
 }
 
 /* FORM SECTION */
