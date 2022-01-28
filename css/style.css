@@ -236,8 +236,8 @@ a.close-nav:hover .toggle::before {
   margin-left: auto;
   border-radius: .5em;
   color: var(--special);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541),
-  -5px -5px 10px rgba(0, 0, 0, 0.514);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+  -2px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #hero img {
@@ -437,8 +437,8 @@ hr {
 form {
   background-color: var(--blue);
   border-radius: .5em;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541),
-  -5px -5px 10px rgba(0, 0, 0, 0.514);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+  -2px -2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px 2px;
 }
 
